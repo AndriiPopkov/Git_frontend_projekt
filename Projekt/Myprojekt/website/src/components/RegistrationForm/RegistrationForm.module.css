@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    font-size: 20px;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    padding: 16px 32px;
+    height: 58px;
+    width: 100%;
+    background: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.form button {
+    margin-top: 16px;
+    color: black;
+    border-radius: 6px;
+    background: white;
+    width: 100%;
+    border: none;
+}
+
+.form button:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}

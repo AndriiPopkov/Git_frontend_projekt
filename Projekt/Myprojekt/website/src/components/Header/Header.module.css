@@ -1,0 +1,217 @@
+.logo {
+    background-color: green;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    position: relative;
+}
+
+.plant {
+    position: absolute;
+    left: 18px;
+    bottom: 12px;
+    width: 36px;
+}
+
+.ground {
+    position: absolute;
+    width: 36px;
+    left: 18px;
+    bottom: -4px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.linie {
+    height: 128px;
+    border-bottom: 1px solid #DDD;
+    background: #FFF;
+    display: flex;
+    position: relative;
+}
+
+.header nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.header nav p {
+    display: flex;
+    color: #282828;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.icon_basket {
+    width: 44px;
+    height: 48px;
+}
+
+.count_basket {
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 14px;
+    width: 26px;
+    height: 26px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+    position: absolute;
+    top: 7px;
+    left: -4px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.nav_menu {
+    border-bottom: 3px solid #282828;;
+}
+
+.elements {
+    display: flex;
+    gap: 26px;
+    position: relative;
+}
+
+.modal {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 20px 0px 32px;
+    right: 0;
+    top: -36px;
+    width: 282px;
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal p {
+    color: black;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.close {
+    padding-right: 16px;
+    display: flex;
+    justify-content: end;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.menu_el:hover {
+    transition: 0.1s;
+    transform: scale(1.05);
+    color: green;
+    font-weight: 600;
+}
+
+@media(max-width: 768px) {
+    .linie {
+        height: 110px;
+    }
+}
+
+
+@media(max-width: 480px) {
+    .header nav {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+    .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+    }
+    .plant {
+        left: 11px;
+        bottom: 8px;
+        width: 23px;
+    }
+    .ground {
+        width: 22px;
+        left: 11px;
+        bottom: -2px;
+    }
+    .icon_basket {
+        width: 32px;
+        height: 30px;
+    }
+    .count_basket {
+        width: 17px;
+        height: 17px;
+        font-size: 8px;
+        font-weight: 400;
+        top: 4px;
+        left: -1px;
+    }
+    .linie {
+        height: 68px;
+    }
+  } 
+  
+  @media(max-width: 360px) {
+    .header nav {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+   
+    .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+    }
+    .plant {
+        left: 11px;
+        bottom: 8px;
+        width: 23px;
+    }
+    .ground {
+        width: 22px;
+        left: 11px;
+        bottom: -2px;
+    }
+    .icon_basket {
+        width: 32px;
+        height: 30px;
+    }
+     .count_basket {
+        width: 17px;
+        height: 17px;
+        font-size: 8px;
+        font-weight: 400;
+        top: 4px;
+        left: -1px;
+    }
+    .linie {
+        height: 68px;
+    }
+  } 
