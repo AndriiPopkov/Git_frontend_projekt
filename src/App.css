@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #282828;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  width: 85%;
+}
+
+.not_found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not_found div {
+  margin-bottom: 32px;
+}
+
+.not_found p {
+  margin: 16px 0 32px 0;
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  width: 664px; 
+}
+
+.link {
+  text-decoration: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media(max-width: 1000px) {
+  .wrapper {
+    max-width: 960px;
+  }
+  h1 {
+    font-size: 70px;
+    width: 100%;
+  }
+} 
+@media(max-width: 768px) {
+  .wrapper {
+    max-width: 728px;
+  }
+  h1 {
+    font-size: 66px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+} 
+@media(max-width: 480px) {
+  .wrapper {
+    max-width: 440px;
+  }
+  h1 {
+    /* font-size: 70px; */
+  }
+  h2 {
+    /* font-size: 46px; */
+  }
+} 
+@media(max-width: 360px) {
+  .wrapper {
+    max-width: 320px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+} 
