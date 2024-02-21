@@ -1,0 +1,104 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    /* font-family: 'ABeeZee', sans-serif; */
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    /* gap: 32px; */
+    background-color: #F1F3F4;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.total_price {
+    font-size: 50px;
+    color: #282828;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+h3 {
+    display: flex;
+    align-items: end;
+}
+
+.form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    font-size: 20px;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    padding: 16px 32px;
+    height: 58px;
+    width: 100%;
+    background: white;
+}
+
+.form input::placeholder,
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.573);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 32px;
+}
+
+.basketisnull {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.basketisnull p {
+    font-size: 22px;
+}
+
+.line {
+    border-top: 1px solid #DDD ;
+    width: 715px;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+}

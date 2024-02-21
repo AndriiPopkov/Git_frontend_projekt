@@ -1,0 +1,119 @@
+.product_item {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+    border: 1px solid #DDD;
+}
+
+.product_item img {
+    width: 100%;
+    height: 313px;
+    height: auto;
+    object-fit: cover;
+}
+
+.product_item_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 313px;
+}
+
+.product_item_img p {
+    display: flex;
+    width: 67px;
+    height: 34px;
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 32px 32px 32px;
+}
+
+.price {
+    padding: 1px;
+    display: flex;
+    gap: 16px;
+    height: 41px;
+}
+
+.description:first-child {
+    color: red
+}
+
+.description p {
+    overflow: hidden;
+    color: #282828;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.price p:first-child {
+    color: #282828;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.price p:last-child {
+    padding-top: 18px;
+    color: #8B8B8B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-decoration-line: line-through;
+}
+
+.btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; 
+    width: 284px;
+    bottom: 20px;
+    left: 15px;
+    margin-top: 40px;
+    background-color: green;
+    border-radius: 6px;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    height: 58px;
+    border-style: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product_item:hover .btn {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.product_item_img:hover .btn {
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+

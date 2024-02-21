@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    color: white;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    padding: 16px 32px;
+    height: 58px;
+    width: 516px;
+    background: none;
+}
+
+.form input::placeholder,
+textarea::placeholder {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}

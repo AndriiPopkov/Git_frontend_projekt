@@ -1,0 +1,21 @@
+.cont_category {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cont_category img {
+    max-width: 316px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.cont_category p {
+    color: #282828;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
