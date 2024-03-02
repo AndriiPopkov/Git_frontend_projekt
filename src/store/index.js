@@ -5,13 +5,21 @@ import { productReducer } from "./productReducer";
 import productsbasketSlice from "./basketProductsSlice";
 
 import storage from "redux-persist/lib/storage";
-import {persistReducer, persistStore} from 'redux-persist'
+import {
+    persistReducer, persistStore,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER
+} from 'redux-persist'
 import modalSlice from './modalSlice';
 
-const persingConfig = {
+const persistConfig = {
     key: 'localStore',
     storage, 
-    whitelist: ['productsbasket'], // оставляет только эти ключи объекта в LS
+    whitelist: ['productsbasket', 'categories'], // оставляет только эти ключи объекта в LS
 }
 
 const rootReducer = combineReducers({
@@ -22,11 +30,17 @@ const rootReducer = combineReducers({
     modal: modalSlice
 })
 
-const persistedReducer = persistReducer(persingConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // export const store = createStore(rootReducer, applyMiddleware(thunk))
 
 export const store = configureStore({
-    reducer: persistedReducer
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
 export const persistor = persistStore(store)

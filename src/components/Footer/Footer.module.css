@@ -57,6 +57,9 @@
     .text_info {
         font-size: 36px;
     }
+    .contact_container {
+        grid-template-columns: 56% 36%;
+    }
    
 }
 
@@ -72,6 +75,5 @@
     }
     .contact_container div {
         padding: 16px
-    }
-   
+    }  
 }

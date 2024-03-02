@@ -58,12 +58,6 @@ h1 {
   text-decoration: none;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
 @media(max-width: 1000px) {
   .wrapper {
     max-width: 960px;

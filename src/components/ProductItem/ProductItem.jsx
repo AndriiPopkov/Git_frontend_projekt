@@ -30,7 +30,7 @@ export default function Item() {
 
     const sale = Math.floor((discont_price * 100 / price - 100) * -1)
     const discount = sale >= 100 ? '' : `-${sale}%`
-  
+
     const [text_btn, setText_btn] = useState('Add to Cart')
     const handlerStyle = () => {
         setText_btn('Added')
@@ -43,11 +43,12 @@ export default function Item() {
 
     return (
         <div className={['wrapper', s.card].join(' ')}>
-            <div>
+            <h3 className={s.title_new}>{title}</h3>
+            <div className={s.picture}>
                 <img className={s.pic} src={ROOT_URL + image} alt={title} />
             </div>
             <div className={s.about}>
-                <h3>{title}</h3>
+                <h3 className={s.title}>{title}</h3>
                 <div className={s.price}>
                     <div>
                         <p className={s.cont}>{`$${discont_price > 0 ? discont_price : price}`}</p>
@@ -70,13 +71,17 @@ export default function Item() {
                         onClick={() => {
                             dispatch(addProduct({ product, countProduct }))
                             setCountProduct(1)
-                            handlerStyle()}}
-                        >{text_btn}
+                            handlerStyle()
+                        }}
+                    >{text_btn}
                     </button>
                 </div>
-                <p className={s.desc}>Description</p>
-                <p className={s.text}>{description}</p>
+                
             </div>
+            <div className={s.description}>
+                    <p className={s.desc}>Description</p>
+                    <p className={s.text}>{description}</p>
+                </div>
         </div>
     )
 }

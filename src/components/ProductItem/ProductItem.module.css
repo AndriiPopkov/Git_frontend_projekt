@@ -1,12 +1,17 @@
 .card {
     margin-top: 40px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
     gap: 32px;
     margin-bottom: 82px;
 }
 
+.picture {
+    grid-row: 1/4;
+}
+
 .pic {
-    width: 780px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -25,7 +30,6 @@ h3 {
 }
 
 .price {
-    width: 360px;
     height: 70px;
     display: flex;
     gap: 16px;
@@ -60,18 +64,17 @@ h3 {
 }
 
 .newdiscount {
-    padding-top: 23px;
     color: #8B8B8B;
     font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
+    padding-top: 24px;
     line-height: 130%;
     text-decoration-line: line-through;
 }
 
 .counter {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
 }
 
 .desc {
@@ -79,6 +82,7 @@ h3 {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
+    margin-bottom: 16px;
 }
 
 .text {
@@ -124,7 +128,7 @@ h3 {
 
 .btn {
     border: none;
-    width: 55%;
+    width: 100%;
     background-color: green;
     border-radius: 6px;
     color: #FFF;
@@ -138,7 +142,7 @@ h3 {
 
 .btn_added {
     border: 1px solid black;
-    width: 55%;
+    width: 100%;
     background-color: white;
     border-radius: 6px;
     color: black;
@@ -149,4 +153,127 @@ h3 {
     letter-spacing: 1px;
     cursor: pointer;
 }
+.title_new {
+    display: none;
+}
 
+@media(max-width: 1440px) {
+    .counter_btn {
+        width: 180px;
+        margin: 0px;
+    }
+    .counter {
+        gap: 16px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+    .counter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .counter_btn {
+        width: 200px;
+    }
+    .picture {
+        grid-row: 1/2;
+    }
+    .description {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    .card {
+        row-gap: 16px;
+    }
+    .cont {
+        font-size: 54px;
+    }
+    .newdiscount {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .title {
+        display: none;
+    }
+    .title_new {
+        display: block;
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .picture {
+        grid-row: 2/3;
+    }
+    .description {
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+    .card {
+        grid-template-columns: 48% 48%;
+        position: relative;
+        gap: 16px;
+    }
+    .proc {
+        position: absolute;
+        left: -40%;
+        top: 15%;
+    }
+    .cont {
+        font-size: 48px;
+    }
+    .newdiscount {
+        font-size: 24px;
+    }
+    .price {
+        position: relative;
+    }
+    .price>div {
+        gap: 16px;
+    }
+    .about {
+        gap: 8px;
+    }
+    .btn {
+        height: 50px;
+    }
+    .btn_added {
+        height: 50px;
+    }
+   .title_new {
+    font-size: 34px;
+   }  
+}
+
+@media(max-width: 480px) {
+    .card {
+        grid-template-columns: 100%;
+    }
+    .title_new {
+        grid-column: 1/2;
+    }
+    .about {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        gap: 0px; 
+    }
+    .description {
+        margin-top: 16px;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    .price, .counter_btn {
+        align-self: center;
+    }
+    .proc {
+        left: 76%;
+        top: 12%;
+    }
+    .price {
+        position: static;
+    }
+}

@@ -103,7 +103,7 @@ function ProductsPage({ type }) {
           </select>
         </div>
       </div>
-      <div className="products">
+      <div className={s.products}>
         {filtere_products.map((el) => (
           <Link className="link" key={el.id} to={`/products/${el.id}`}>
             <ProductCard {...el} />

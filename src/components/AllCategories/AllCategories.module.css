@@ -11,3 +11,21 @@
 .cont_img img {
     width: 100%;
 }
+
+@media(max-width: 1440px) {
+   .cont_img {
+    grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media(max-width: 1000px) {
+    .cont_img {
+     grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media(max-width: 480px) {
+    .cont_img {
+     grid-template-columns: 1fr;
+    }
+ }
