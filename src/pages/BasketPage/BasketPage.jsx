@@ -59,10 +59,11 @@ export default function BasketPage() {
 
   return (
     <div className={[s.section, 'wrapper'].join(' ')}>
+      
       <div className={`wrapper ${s.header}`}>
         <h2>Shopping cart</h2>
-        <div className={s.cont}>
-          <hr className={s.line}></hr>
+        <div className={s.linie}></div>
+        <div className={s._nav}>
           <Link to={'/products/all'}>
             <BtnNav text='Back to the store'></BtnNav>
           </Link>
@@ -99,6 +100,11 @@ export default function BasketPage() {
           </section>
         </div>
       </div>
+      <div className={s.nav_}>
+          <Link to={'/products/all'}>
+            <BtnNav text='Back to the store'></BtnNav>
+          </Link>
+        </div>
     </div>
   )
 }

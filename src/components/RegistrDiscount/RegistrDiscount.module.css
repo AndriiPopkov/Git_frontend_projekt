@@ -50,36 +50,30 @@
         height: 308px;
    }
    .forms {
-    width: 418px;
+    width: 318px;
    } 
 
    @media(max-width: 768px) {
-    .title {
+        .title {
         font-size: 32px;
     }
     .registr_form img {
-        margin-top: 95px;
-        height: 264px;
+        margin-top: 90px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        top: 302px;
     }
     .forms {
         width: 50%;
     }
-   }
-
-   @media(max-width: 480px) {
     .registr_form {
         flex-direction: column-reverse;
         height: 550px;
         justify-content: flex-end;
         object-position: top;
         overflow: hidden;
-    }
-    .registr_form img {
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-        top: 302px;
-    }  
+    } 
     .forms {
         width: 100%;
     }
@@ -90,12 +84,11 @@
         padding: 0;
     }
     .container {
-        height: max-content;
+        height: 680px;
         position: relative;
         padding: 16px 16px 0px 16px;
     }
    }
-
 }
    
   

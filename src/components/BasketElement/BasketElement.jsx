@@ -29,7 +29,7 @@ export default function BasketElement({ id, dataProduct, count }) {
             <span onClick={handler}>x</span>
             <img src={ROOT_URL + dataProduct.image} alt="" />
             <div>
-                <p>{dataProduct.title}</p>
+                <p className={s.title_}>{dataProduct.title}</p>
                 <div className={s.count_price}>
                     <div className={s.counter}>
                         <button 

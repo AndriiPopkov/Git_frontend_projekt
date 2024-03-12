@@ -25,13 +25,18 @@ function ProductsPage({ type }) {
 
   const dispatch = useDispatch();
   const checkboxRef = useRef();
+  console.log(checkboxRef);
   const formRef = useRef();
   const optionRef = useRef()
+  const fromRef = useRef()
+  const toRef = useRef()
 
   useEffect(() => {
     window.scrollTo(0, 0);
       checkboxRef.current.checked = false;
       optionRef.current.value = 'by default'
+      fromRef.current.value = ''
+      toRef.current.value = ''
     if (type !== "category") {
       dispatch(fecthAllProducts(type));
     } else {
@@ -80,8 +85,8 @@ function ProductsPage({ type }) {
         <div className={s.sortel}>
           <p>Price</p>
           <form ref={formRef} className={s.sort_input} onKeyUp={priceFormHandler}>
-            <input placeholder="from" name="from"></input>
-            <input placeholder="to" name="to" ></input>
+            <input ref={fromRef} placeholder="from" name="from"></input>
+            <input ref={toRef} placeholder="to" name="to" ></input>
           </form>
         </div>
         <div className={s.check_container} style={styles}>

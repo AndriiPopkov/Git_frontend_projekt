@@ -18,6 +18,7 @@ export default function Categories() {
 
     return (
         <div className={`wrapper ${s.categories}`}>
+            
             <div className={`wrapper ${s.header}`}>
                 <h2>Categories</h2>
                 <div className={s.linie}></div>

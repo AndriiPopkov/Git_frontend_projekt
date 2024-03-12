@@ -11,19 +11,6 @@
     align-items: center;
 }
 
-.categories_btn {
-    color: #8B8B8B;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 126%;
-    width: 142px;
-    height: 36px;
-    border-radius: 6px;
-    border: 1px solid #DDD;
-    cursor: pointer;
-}
-
 .linie {
     margin-left: 32px;
     border-top: 1px solid #DDD ; 

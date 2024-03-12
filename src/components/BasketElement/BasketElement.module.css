@@ -3,16 +3,17 @@
     gap: 32px;
     border: 1px solid #DDD;
     border-radius: 12px;
-    width: 850px; 
+    width: 100%;
     position: relative;
 }
 
 .basket_element>div:last-child {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 40px;
-    padding: 12px 42px 12px 12px;
+    padding: 12px 55px 12px 0px;
 }
 
 .basket_element p:first-child {
@@ -42,16 +43,17 @@
 .count_price {
     display: flex;
     gap: 40px;
-    align-items: center;
 }
 
 .count_price>div:last-child {
     display: flex;
-    justify-content: center;
     gap: 16px;
 }
 
-.counter {
+.counter { 
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
     border-radius: 6px;
     border: 1px solid #DDD;
     align-items: center;
@@ -60,7 +62,7 @@
     height: 58px;
 }
 
-.basket_element >img {
+.basket_element>img {
     width: 200px;
     object-fit: cover;
     border: 1px solid #DDD;
@@ -82,12 +84,6 @@
     width: 24px;
 }
 
-.counter {
-    width: 180px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .counter p {
     color: #282828;
     text-align: center;
@@ -102,4 +98,87 @@ span {
     top: 5px;
     right: 20px;
     cursor: pointer;
+}
+
+@media(max-width: 1440px) {
+    .count_price {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .basket_element>div:last-child {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .count_price {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    .count_price {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .basket_element {
+        gap: 16px;
+    }
+
+    span {
+        top: 3px;
+        right: 15px;
+    }
+
+    .basket_element>div:last-child {
+        padding-right: 45px;
+    }
+}
+
+@media(max-width: 480px) {
+    .basket_element>div:last-child {
+        padding-right: 0px;
+    }
+
+    .basket_element>img {
+        width: 140px;
+    }
+
+    .basket_element {
+        gap: 8px;
+    }
+
+    .basket_element>div:last-child>p:first-child {
+        font-size: 16px;
+        max-width: 80%;
+    }
+
+    .counter {
+        width: 150px;
+        height: 48px;
+    }
+
+    .p_m {
+        width: 48px;
+        height: 48px;
+    }
+
+    .price p:first-child {
+        font-size: 30px;
+    }
+    
+    .price p:last-child {
+        font-size: 20px;
+    }
+
+    .count_price>div:last-child {
+        display: flex;
+        gap: 8px;
+    }
 }

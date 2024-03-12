@@ -11,6 +11,7 @@ import { addProduct } from '../../store/basketProductsSlice'
 export default function Item() {
 
     const { id } = useParams()
+    console.log(id);
     const dispatch = useDispatch()
     const product = useSelector(store => store.product)
 
